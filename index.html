@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API Documentation</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+
+      pre {
+        border-radius: 10px;
+        background-color: rgb(47, 45, 45);
+        padding: 10px;
+        overflow-x: auto;
+        color: white;
+      }
+
+      p {
+        margin-top: 10px;
+      }
+
+      code {
+        display: block;
+        white-space: pre-wrap;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>API Documentation Update -> 16 Mei</h1>
+
+    <h2>Sign In - Endpoint</h2>
+    <p>Endpoint used for user login.</p>
+    <pre><code>POST /v1/sign-in</code></pre>
+
+    <h3>Request</h3>
+    <pre><code>Content-Type: application/json
+
+{
+  "username": "value1",
+  "password": "value2"
+}</code></pre>
+
+    <h3>Response</h3>
+    <pre><code>{
+  "status": 200,
+  "accessToken": token,
+  "message": "Successfully Login"
+}</code></pre>
+
+    <h2>Sign Up - Endpoint</h2>
+    <p>Endpoint used for user registration.</p>
+    <pre><code>POST /v1/sign-up</code></pre>
+
+    <h3>Request</h3>
+    <pre><code>Content-Type: application/json
+
+{
+  "nama": "value1",
+  "username": "value2",
+  "password": "value3",
+  "userAgent": "value4"
+}</code></pre>
+
+    <h3>Response</h3>
+    <pre><code>{
+  "message": "Successfully Register"
+}</code></pre>
+
+    <h2>Refresh Token - Endpoint</h2>
+    <p>Endpoint used to check or retrieve data from the token.</p>
+    <pre><code>GET /v1/refresh-token</code></pre>
+
+    <h3>Request Header</h3>
+    <pre><code>{
+  "x-access-token": "value1"
+}</code></pre>
+
+    <h3>Response</h3>
+    <pre><code>{
+  "status": 200,
+  "data": {}
+}</code></pre>
+
+    <h2>Create Guru - Endpoint</h2>
+    <p>Endpoint used to add a new teacher's data.</p>
+    <pre><code>POST /v1/guru</code></pre>
+
+    <h3>Request</h3>
+    <pre><code>{
+  "nama": "value1",
+  "umur": "value2",
+  "mengajar": "value3",
+  "status_guru": "value4",
+  "rating": "value5"
+}</code></pre>
+
+    <h3>Response</h3>
+    <pre><code>{
+  "message": "Successfully Create Guru"
+}</code></pre>
+
+    <script></script>
+  </body>
+</html>
